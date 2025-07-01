@@ -4,19 +4,35 @@
   "modules": [
     {
       "kind": "javascript-module",
+      "path": "oscd-menu-open.spec.ts",
+      "declarations": [],
+      "exports": [
+        {
+          "kind": "custom-element-definition",
+          "name": "oscd-menu-open",
+          "declaration": {
+            "name": "OscdMenuOpen",
+            "module": "/oscd-menu-open.js"
+          }
+        }
+      ]
+    },
+    {
+      "kind": "javascript-module",
       "path": "oscd-menu-open.ts",
       "declarations": [
         {
           "kind": "class",
           "description": "",
-          "name": "OscdOpen",
+          "name": "OscdMenuOpen",
           "members": [
             {
               "kind": "field",
               "name": "input",
               "type": {
                 "text": "HTMLInputElement"
-              }
+              },
+              "privacy": "private"
             },
             {
               "kind": "method",
@@ -38,12 +54,20 @@
                   }
                 }
               ]
+            },
+            {
+              "kind": "field",
+              "name": "type",
+              "type": {
+                "text": "string"
+              },
+              "default": "'file'"
             }
           ],
           "superclass": {
-            "name": "LitElement",
-            "package": "lit"
+            "name": "HTMLElement"
           },
+          "tagName": "oscd-menu-open",
           "customElement": true
         }
       ],
@@ -52,7 +76,7 @@
           "kind": "js",
           "name": "default",
           "declaration": {
-            "name": "OscdOpen",
+            "name": "OscdMenuOpen",
             "module": "oscd-menu-open.ts"
           }
         }
