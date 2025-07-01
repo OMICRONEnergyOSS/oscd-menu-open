@@ -1,18 +1,30 @@
-import { html, LitElement } from 'lit';
-import { query } from 'lit/decorators.js';
-
 import { newOpenEvent } from '@omicronenergy/oscd-api/utils.js';
 
-export default class OscdOpen extends LitElement {
-  @query('input')
-  input!: HTMLInputElement;
+class OscdMenuOpen extends HTMLElement {
+  private input: HTMLInputElement;
 
-  async run() {
+  constructor() {
+    super();
+    const shadow = this.attachShadow({ mode: 'open' });
+
+    this.input = document.createElement('input');
+    this.input.type = 'file';
+
+    this.input.addEventListener('click', (event: MouseEvent) => {
+      (event.target as HTMLInputElement).value = '';
+    });
+
+    this.input.addEventListener('change', this.openDoc.bind(this));
+
+    shadow.appendChild(this.input);
+  }
+
+  run() {
     this.input.click();
   }
 
   async openDoc(event: Event): Promise<void> {
-    const file = (<HTMLInputElement | null>event.target)?.files?.item(0);
+    const file = (event.target as HTMLInputElement)?.files?.item(0);
     if (!file) {
       return;
     }
@@ -24,16 +36,6 @@ export default class OscdOpen extends LitElement {
     this.dispatchEvent(newOpenEvent(doc, docName));
     this.input.onchange = null;
   }
-
-  render() {
-    return html`
-      <input
-        @click=${({ target }: MouseEvent) => {
-          (<HTMLInputElement>target).value = '';
-        }}
-        @change=${this.openDoc}
-        type="file"
-      />
-    `;
-  }
 }
+
+export default OscdMenuOpen;
