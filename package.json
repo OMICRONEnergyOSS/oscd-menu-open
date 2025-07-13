@@ -18,7 +18,7 @@
     "bundle": "rimraf dist && rollup -c rollup.config.js",
     "test": "tsc && wtr --coverage",
     "test:watch": "tsc && concurrently -k -r \"tsc --watch --preserveWatchOutput\" \"wtr --watch\"",
-    "deploy": "gh-pages --dist dist",
+    "deploy": "gh-pages --dist dist -m \"ci: Deploy OpenSCD Menu Plugin\"",
     "prepare": "husky"
   },
   "repository": {
