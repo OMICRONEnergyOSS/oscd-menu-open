@@ -18,7 +18,6 @@
     "bundle": "rimraf dist && rollup -c rollup.config.js",
     "test": "tsc && wtr --coverage",
     "test:watch": "tsc && concurrently -k -r \"tsc --watch --preserveWatchOutput\" \"wtr --watch\"",
-    "deploy": "gh-pages --dist dist -m \"ci: Deploy OpenSCD Menu Plugin\"",
     "prepare": "husky"
   },
   "repository": {
@@ -76,7 +75,6 @@
     "eslint-plugin-no-only-tests": "^3.3.0",
     "eslint-plugin-prettier": "^5.5.0",
     "eslint-plugin-wc": "^3.0.1",
-    "gh-pages": "^6.3.0",
     "husky": "^9.1.7",
     "lint-staged": "^16.1.2",
     "prettier": "^3.6.0",
