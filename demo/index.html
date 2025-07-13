@@ -1,43 +1,52 @@
-<title>oscd-open Demo</title>
-<link
-  rel="stylesheet"
-  href="https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@300&family=Roboto:wght@300;400;500&display=swap"
-/>
-<link
-  rel="stylesheet"
-  href="https://fonts.googleapis.com/css?family=Material+Icons&display=block"
-/>
-<link
-  href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined"
-  rel="stylesheet"
-/>
-<oscd-shell></oscd-shell>
+<html>
+  <head>
+    <title>oscd-menu-open Demo</title>
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@300&family=Roboto:wght@300;400;500&display=swap"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css?family=Material+Icons&display=block"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <oscd-shell></oscd-shell>
 
-<script type="module">
-  import '@omicronenergy/oscd-shell/oscd-shell.js';
+    <script type="module">
+      import '@omicronenergy/oscd-shell/oscd-shell.js';
 
-  const plugins = {
-    menu: [
-      {
-        name: 'Open File',
-        translations: { de: 'Datei öffnen' },
-        icon: 'folder_open',
-        active: true,
-        src: '/dist/oscd-menu-open.js',
-      },
-    ],
-  };
+      const plugins = {
+        menu: [
+          {
+            name: 'Open File',
+            translations: { de: 'Datei öffnen' },
+            icon: 'folder_open',
+            active: true,
+            src: '/dist/oscd-menu-open.js',
+          },
+        ],
+      };
 
-  const editor = document.querySelector('oscd-shell');
-  const params = new URL(document.location).searchParams;
-  for (const [name, value] of params) {
-    editor.setAttribute(name, value);
-  }
-  editor.plugins = plugins;
-</script>
-<style>
-  * {
-    margin: 0px;
-    padding: 0px;
-  }
-</style>
+      const editor = document.querySelector('oscd-shell');
+      const params = new URL(document.location.href).searchParams;
+      if (!editor) {
+        throw new Error('oscd-shell element not found');
+      }
+      for (const [name, value] of params) {
+        editor.setAttribute(name, value);
+      }
+      editor.plugins = plugins;
+    </script>
+    <style>
+      * {
+        margin: 0px;
+        padding: 0px;
+      }
+    </style>
+  </body>
+</html>

@@ -1,12 +1,12 @@
 node_modules
-*.js
-*.map
-*.d.ts
+# *.js
+# *.map
+# *.d.ts
 *.tsbuildinfo
-!commitlint.config.js
-!eslint.config.js
+# !commitlint.config.js
+# !eslint.config.js
 # !web-dev-server.config.js
-!web-test-runner.config.js
+# !web-test-runner.config.js
 
 ## editors
 /.idea
