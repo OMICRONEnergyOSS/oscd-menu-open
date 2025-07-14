@@ -1,5 +1,12 @@
 # Changelog
 
+## [0.0.6](https://github.com/OMICRONEnergyOSS/oscd-menu-open/compare/oscd-menu-open-v0.0.5...oscd-menu-open-v0.0.6) (2025-07-14)
+
+
+### Bug Fixes
+
+* pkg-lock out of sync + update all deps ([390dbbf](https://github.com/OMICRONEnergyOSS/oscd-menu-open/commit/390dbbfe43f9a10d9eb8a927f38e0b2549f81d8c))
+
 ## [0.0.5](https://github.com/OMICRONEnergyOSS/oscd-menu-open/compare/oscd-menu-open-v0.0.4...oscd-menu-open-v0.0.5) (2025-07-14)
 
 
