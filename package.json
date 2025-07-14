@@ -3,11 +3,15 @@
   "version": "0.0.3",
   "description": "OpenSCD Menu Plugin for loading IEC 61850 SCL files into OpenSCD.",
   "type": "module",
-  "main": "dist/index.js",
-  "module": "dist/index.js",
   "exports": {
-    ".": "./dist/oscd-menu-open.js"
+    ".": "./dist/oscd-menu-open.js",
+    "./oscd-menu-open.js": "./dist/oscd-menu-open.js"
   },
+  "files": [
+    "/dist/",
+    "!/dist/*.spec.*",
+    "!/dist/*.test.*"
+  ],
   "scripts": {
     "lint": "eslint .",
     "format": "eslint . --fix",
@@ -35,19 +39,9 @@
   ],
   "author": "OMICRON Electronics GmbH",
   "license": "Apache-2.0",
-  "files": [
-    "**/*.js",
-    "**/*.js.map",
-    "**/*.d.ts",
-    "!**/*.spec.*",
-    "!commitlint.config.js",
-    "!coverage",
-    "!doc"
-  ],
   "dependencies": {
     "@omicronenergy/oscd-api": "^0.1.0",
     "@omicronenergy/oscd-shell": "^0.0.7",
-    "lit": "^3.3.0",
     "tslib": "^2.8.1"
   },
   "devDependencies": {
