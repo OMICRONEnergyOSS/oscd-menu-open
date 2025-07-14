@@ -1,5 +1,12 @@
 # Changelog
 
+## [0.0.5](https://github.com/OMICRONEnergyOSS/oscd-menu-open/compare/oscd-menu-open-v0.0.4...oscd-menu-open-v0.0.5) (2025-07-14)
+
+
+### Bug Fixes
+
+* add missing rollup deps ([9144d7b](https://github.com/OMICRONEnergyOSS/oscd-menu-open/commit/9144d7b94d4531bfc2c45222bcf60cd753d03371))
+
 ## [0.0.4](https://github.com/OMICRONEnergyOSS/oscd-menu-open/compare/oscd-menu-open-v0.0.3...oscd-menu-open-v0.0.4) (2025-07-14)
 
 
