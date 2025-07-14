@@ -6,7 +6,7 @@ import fs from 'fs';
 const tsconfig = JSON.parse(fs.readFileSync('./tsconfig.json', 'utf8'));
 const demoTsconfig = {
   ...tsconfig,
-  compilerOptions: { ...tsconfig.compilerOptions, outDir: './dist/demo' },
+  compilerOptions: { ...tsconfig.compilerOptions, outDir: 'dist/demo' },
 };
 
 export default [
