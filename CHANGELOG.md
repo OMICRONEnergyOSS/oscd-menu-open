@@ -1,5 +1,12 @@
 # Changelog
 
+## [0.0.2](https://github.com/OMICRONEnergyOSS/oscd-menu-open/compare/oscd-menu-open-v0.0.1...oscd-menu-open-v0.0.2) (2025-07-14)
+
+
+### Bug Fixes
+
+* correct dev-server config ([f4e9b0f](https://github.com/OMICRONEnergyOSS/oscd-menu-open/commit/f4e9b0fb719e33bb987940d090d2c1a022cf39b2))
+
 ## 0.0.1 (2025-07-14)
 
 
